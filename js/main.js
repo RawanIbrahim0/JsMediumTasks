@@ -1,30 +1,29 @@
 // 1  //
 function smile(input) {
-    let result = input.replaceAll(")", "(");
-    return result;
-  }
-  
-  let input = ":) :) :) All smiles here :)";
+  let result = input.replaceAll(")", "(");
+  return result;
+}
 
-  let output1 = smile(input);
-  
+let input = ":) :) :) All smiles here :)";
 
-  console.log("\n"+output1);
+let output1 = smile(input);
 
-  // 2  //
-  function hidenCardNumber(number) {
-    let lastFour = number.slice(-4);
-  
+console.log("\n" + output1);
 
-    let hidden = "*".repeat(12);
-  
-    return hidden + lastFour;
-  }
-  
-  let number = "1234567890123456";
-  let output2 = hidenCardNumber(number);
-  
-  console.log("\n-----------------------------------------------------\n");
+// 2  //
+function hidenCardNumber(number) {
+  let lastFour = number % 10000;
 
-  console.log(output2);
+  let hidden = "*".repeat(12);
 
+  let StringText = lastFour.toString();
+
+  return hidden + StringText;
+}
+
+let number = 1234567890123456;
+let output2 = hidenCardNumber(number);
+
+console.log("\n-----------------------------------------------------\n");
+
+console.log(output2);
